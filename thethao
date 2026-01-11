@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CLB Thể Thao - THPT Nguyễn Đình Chiểu</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #bbdefb, #e3f2fd);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      background: linear-gradient(90deg, #1565c0, #42a5f5);
+      color: white;
+      padding: 30px 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .content img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #1565c0;
+    }
+
+    a.back {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: white;
+      background: #1565c0;
+      padding: 10px 20px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    a.back:hover {
+      background: #0d47a1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CLB THỂ THAO</h1>
+    <p>Trường THPT Nguyễn Đình Chiểu</p>
+  </header>
+
+  <div class="content">
+    <img src="https://i.imgur.com/0R6kW4S.jpg" alt="CLB Thể Thao">
+    <h2>Giới thiệu</h2>
+    <p>
+      CLB Thể Thao là nơi dành cho những bạn yêu thích vận động, năng động và đam mê thể chất.
+      Tại đây, học sinh được rèn luyện kỹ năng, tinh thần đồng đội và sức khỏe thông qua các môn như:
+      <strong>Bóng đá, Cầu lông, Bóng chuyền, Bóng rổ, Thể thao điện tử (E-Sports)</strong> và nhiều hoạt động khác.
+    </p>
+
+    <h2>Hoạt động nổi bật</h2>
+    <ul>
+      <li>Giải bóng đá truyền thống THPT Nguyễn Đình Chiểu Cup</li>
+      <li>Giải cầu lông giao hữu học sinh – giáo viên</li>
+      <li>Tham gia các cuộc thi thể thao cấp thành phố</li>
+      <li>Team eSports đại diện trường thi đấu Liên Minh, Valorant</li>
+    </ul>
+
+    <h2>Thông điệp</h2>
+    <p>
+      “Không chỉ rèn luyện sức khỏe, thể thao giúp chúng ta kết nối, học hỏi và trưởng thành hơn mỗi ngày.”
+    </p>
+
+    <a href="index.html" class="back">← Quay lại trang chủ</a>
+  </div>
+</body>
+</html>
