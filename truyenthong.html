@@ -11,20 +11,7 @@
       background: linear-gradient(135deg, #ede7f6 0%, #d1c4e9 40%, #b39ddb 100%);
       background-attachment: fixed;
       color: #222;
-      position: relative;
       overflow-x: hidden;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.3), transparent 60%),
-                  radial-gradient(circle at 80% 70%, rgba(255,255,255,0.25), transparent 60%);
-      z-index: -1;
     }
 
     nav {
@@ -89,48 +76,47 @@
       opacity: 0.95;
     }
 
+    /* ======= BÀI VIẾT NẰM NGANG ======= */
     .news-section {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: 50px auto;
       padding: 0 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      display: flex;
+      flex-direction: column;
       gap: 25px;
     }
 
-    a.article {
-      text-decoration: none;
-      color: inherit;
+    .article {
+      display: flex;
+      align-items: stretch;
       background: rgba(255, 255, 255, 0.96);
       border-radius: 14px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.1);
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: block;
-      cursor: pointer;
-      backdrop-filter: blur(5px);
+      text-decoration: none;
+      color: inherit;
     }
 
-    a.article:hover {
+    .article:hover {
       transform: translateY(-5px);
       box-shadow: 0 12px 25px rgba(0,0,0,0.2);
       filter: brightness(1.03);
     }
 
-    a.article img {
-      width: 100%;
-      height: 230px;
+    .article img {
+      width: 40%;
       object-fit: cover;
-      display: block;
     }
 
     .article-content {
+      width: 60%;
       padding: 20px;
     }
 
     .article-content h2 {
       font-size: 21px;
-      margin: 0 0 10px 0;
+      margin-top: 0;
       color: #6a1b9a;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -140,6 +126,20 @@
       font-size: 15px;
       color: #444;
       line-height: 1.6;
+    }
+
+    /* Responsive: màn hình nhỏ thì dọc */
+    @media (max-width: 768px) {
+      .article {
+        flex-direction: column;
+      }
+      .article img {
+        width: 100%;
+        height: 220px;
+      }
+      .article-content {
+        width: 100%;
+      }
     }
 
     footer {
@@ -178,8 +178,36 @@
   </header>
 
   <div class="news-section">
-    <a href="https://www.facebook.com/share/p/1HjRsS7hVz/?mibextid=wwXIfr" target="_blank" class="article">
-      <img src="https://i.imgur.com/tBuBMBJ.jpeg" alt="Sự kiện xổ số may mắn">
+    <a href="https://www.facebook.com/share/p/17Yo8jbK2k/" target="_blank" class="article">
+      <img src="https://i.imgur.com/tBuBMBJ.jpeg" alt="Hậu trường sự kiện">
+      <div class="article-content">
+        <h2>📣Thông tin chính thức từ Câu lạc bộ Truyền Thông Quảng Bá🔔</h2>
+        <p></p>
+      </div>
+    </a>
+
+    <a href="https://www.youtube.com/" target="_blank" class="article">
+      <img src="https://i.imgur.com/7pFhJHh.jpeg" alt="Video dự án học sinh">
+      <div class="article-content">
+        <h2>📢𝐑𝐄𝐂𝐀𝐏 & 𝐂𝐇𝐄𝐂𝐊 𝐘𝐎𝐔𝐑 𝐌𝐀𝐈𝐋📢
+__________________________________
+
+📣Thế là sau khoảng thời gian phiêu lưu đầy thử thách thì cuối cùng, chúng mình cũng đã hoàn thành chặng cuối của chuyến hành trình mang tên 𝐆𝟓-𝟐𝟎𝟐𝟒 rồi. Chúng mình đã cùng trải qua một buổi Casting Offine vừa khó nhằn nhưng cũng đầy tiếng cười với sự góp mặt của ban chủ nhiệm 𝗡𝗗𝗖 𝗦𝗢𝗖𝗜𝗔𝗟 𝗠𝗘𝗗𝗜𝗔 𝗖𝗟𝗨𝗕 và những bạn đã xuất sắc đậu vòng Casting đầu tiên. Qua buổi Casting này, chúng mình thực sự rất trân trọng sự quan tâm và nhiệt huyết của các bạn dành cho CLB, cũng như rất ngưỡng mộ sự tài năng của các bạn luôn đó nhaaa😍
+
+📩Buổi Casting cũng đã kết thúc, giờ là lúc chúng mình đắn đo tìm ra những thành viên phù hợp nhất, những mảnh ghép vừa vặn nhất để cùng đồng hành trên con đường đầy chông gai nhưng cũng vô cùng đáng nhớ ở phía trước. Vì vậy mà các bạn nhỏ của chúng mình đừng quên check hộp thư vào lúc 8h30 sáng ngày 16/10 nha. 𝗡𝗗𝗖 𝗦𝗢𝗖𝗜𝗔𝗟 𝗠𝗘𝗗𝗜𝗔 𝗖𝗟𝗨𝗕 đã gửi mail cho các bạn, đồng thời cũng đã gửi các thông tin cần thiết rồi đó nhaa. Sồ mong sẽ mau chóng được chào đón mọi người đến với ngôi nhà nhỏ nèee. 
+
+🫂Chúng mình cũng rất lấy làm tiếc với các bạn chưa thể trở thành mảnh ghép của 𝗡𝗗𝗖 𝗦𝗢𝗖𝗜𝗔𝗟 𝗠𝗘𝗗𝗜𝗔 𝗖𝗟𝗨𝗕, nhưng mà đừng có buồn nhaa. Tụi mình vẫn sẽ luôn đồng hành và hỗ trợ mọi người hết mình, vì vậy mà đừng ngần ngại tìm đến Sồ khi có khó khăn hay thắc mắc gì nhaa.
+
+🔥𝗡𝗗𝗖 𝗦𝗢𝗖𝗜𝗔𝗟 𝗠𝗘𝗗𝗜𝗔 𝗖𝗟𝗨𝗕 luôn mong rằng các bạn sẽ luôn giữ vững đam mê và nhiệt huyết của mình trên chặng đường sắp tới và đừng quên hãy tiếp tục theo dõi chúng mình để không bỏ lỡ thông tin hay sự kiện mới đầy thú vị nha. Mãi iuuu❤️‍🔥
+____________________________________
+CONTACT:
+Email: clubndcsocialmedia@gmail.com</h2>
+        <p>Sản phẩm truyền thông do CLB sản xuất, giới thiệu hoạt động nổi bật của học sinh trong học kỳ II năm học 2025–2026.</p>
+      </div>
+    </a>
+
+    <a href="https://www.canva.com/" target="_blank" class="article">
+      <img src="https://i.imgur.com/jPEY64J.jpeg" alt="Thiết kế poster CLB">
       <div class="article-content">
         <h2>𝑹𝑬𝑪𝑨𝑷 𝑭𝑰𝑹𝑺𝑻 𝑴𝑬𝑬𝑻𝑰𝑵𝑮 𝒀𝑶𝑵 - 𝒀𝒐𝒖𝒕𝒉 𝒐𝒇 𝑵𝑫𝑪
 
@@ -197,29 +225,6 @@ ________________________
 CONTACT
 Email: yonyouthofndc@gmail.com</h2>
         <p></p>
-      </div>
-    </a>
-
-    <a href="https://www.facebook.com/share/p/17Yo8jbK2k/" target="_blank" class="article">
-      <img src="https://i.imgur.com/7pFhJHh.jpeg" alt="Dự án học sinh".            
-      <div class="article-content">
-        <h2📣Thông tin chính thức từ Câu lạc bộ Truyền Thông Quảng Bá🔔</h2>
-        <p></p>
-      </div>
-    </a>
-
-    <a href="https://www.facebook.com/share/p/14UEmW8vCG9/" target="_blank" class="article">
-      <img src="https://i.imgur.com/jPEY64J.jpeg" alt="Thiết kế poster CLB">
-      <div class="article-content">
-        <h2>𝐑𝐄𝐂𝐀𝐏
-_________________________
-💥Sau một khoảng thời gian dài đầy khó khăn và thử thách, 𝗬𝗢𝗨𝗧𝗛 𝗢𝗙 𝗡𝗗𝗖 đã chính thức tìm ra những nhân tố cho câu lạc bộ trong tương lai.
-Buổi casting offline đã diễn ra cực kỳ thành công và suôn sẻ. Xin gửi lời cảm ơn chân thành đến các 𝑵𝑫𝑪-𝒆𝒓𝒔 đã dành sự quan tâm đến 𝗬𝗢𝗡. Mong rằng trong thời gian sắp tới, các bạn vẫn dành thật nhiều sự quan tâm và nhiệt huyết dành cho chúng mình.
-❤️‍🔥Một lần nữa xin cảm ơn vì tình yêu thương của các bạn dành cho 𝗬𝗢𝗨𝗧𝗛 𝗢𝗙 𝗡𝗗𝗖.
-________________________
-CONTACT
-Email: yonyouthofndc@gmail.com</h2>
-        <p>Cuộc thi sáng tạo poster thu hút đông đảo học sinh tham gia, thể hiện tinh thần đoàn kết và sự sáng tạo tuổi trẻ NĐC.</p>
       </div>
     </a>
   </div>
