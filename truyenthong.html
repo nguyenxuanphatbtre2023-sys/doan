@@ -3,144 +3,213 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CLB Thiện Nguyện - THPT Nguyễn Đình Chiểu</title>
+  <title>CLB Truyền Thông - THPT Nguyễn Đình Chiểu</title>
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #f3f8f4;
-      color: #333;
+      background: linear-gradient(135deg, #ede7f6 0%, #d1c4e9 40%, #b39ddb 100%);
+      background-attachment: fixed;
+      color: #222;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.3), transparent 60%),
+                  radial-gradient(circle at 80% 70%, rgba(255,255,255,0.25), transparent 60%);
+      z-index: -1;
+    }
+
+    nav {
+      background: rgba(106, 27, 154, 0.9);
+      backdrop-filter: blur(6px);
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 15px 0;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: #e1bee7;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #e1bee7;
+    }
+
+    nav a:hover::after {
+      width: 100%;
     }
 
     header {
-      background: linear-gradient(90deg, #2e7d32, #66bb6a);
+      background: linear-gradient(120deg, #6a1b9a, #8e24aa);
       color: #fff;
       text-align: center;
-      padding: 30px 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      padding: 70px 20px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+      border-bottom: 5px solid #ce93d8;
     }
 
     header h1 {
       margin: 0;
-      font-size: 26px;
+      font-size: 42px;
+      letter-spacing: 1px;
+      text-shadow: 0 3px 8px rgba(0,0,0,0.2);
     }
 
     header p {
-      margin-top: 5px;
-      font-size: 15px;
-      opacity: 0.9;
+      margin-top: 8px;
+      font-size: 18px;
+      opacity: 0.95;
     }
 
     .news-section {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 0 15px;
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
     }
 
-    .article {
-      display: flex;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
+    a.article {
+      text-decoration: none;
+      color: inherit;
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 14px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
       overflow: hidden;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: block;
+      cursor: pointer;
+      backdrop-filter: blur(5px);
     }
 
-    .article:hover { transform: scale(1.02); }
+    a.article:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+      filter: brightness(1.03);
+    }
 
-    .article img {
-      width: 40%;
+    a.article img {
+      width: 100%;
+      height: 230px;
       object-fit: cover;
+      display: block;
     }
 
     .article-content {
       padding: 20px;
-      width: 60%;
     }
 
     .article-content h2 {
-      margin-top: 0;
-      font-size: 18px;
-      color: #2e7d32;
+      font-size: 21px;
+      margin: 0 0 10px 0;
+      color: #6a1b9a;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
     .article-content p {
-      font-size: 14px;
+      font-size: 15px;
       color: #444;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     footer {
-      background: #212121;
-      color: #eee;
+      background: #4a148c;
+      color: #f3e5f5;
       text-align: center;
-      padding: 20px 10px;
-      margin-top: 40px;
+      padding: 25px 15px;
+      font-size: 14px;
+      margin-top: 50px;
+      box-shadow: 0 -3px 15px rgba(0,0,0,0.2);
     }
 
-    a.back {
-      display: inline-block;
+    footer a {
+      color: #ce93d8;
       text-decoration: none;
-      background: #2e7d32;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 6px;
+      font-weight: 500;
       transition: 0.3s;
-      margin-top: 10px;
     }
 
-    a.back:hover { background: #1b5e20; }
-
-    @media (max-width: 768px) {
-      .article { flex-direction: column; }
-      .article img { width: 100%; height: 200px; }
-      .article-content { width: 100%; }
+    footer a:hover {
+      color: #ffffff;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
+  <nav>
+    <a href="index.html">🏠 Trang chủ</a>
+    <a href="thethao.html">⚽ CLB Thể Thao</a>
+    <a href="thiennguyen.html">🤝 CLB Thiện Nguyện</a>
+  </nav>
+
   <header>
-    <h1>CLB THIỆN NGUYỆN</h1>
+    <h1>CLB TRUYỀN THÔNG</h1>
     <p>Trường THPT Nguyễn Đình Chiểu</p>
   </header>
 
   <div class="news-section">
-
-    <div class="article">
-      <img src="https://i.imgur.com/yaJ6s4T.jpg" alt="Thiện nguyện vùng cao">
+    <a href="https://www.facebook.com/" target="_blank" class="article">
+      <img src="https://i.imgur.com/tBuBMBJ.jpeg" alt="Hậu trường sự kiện">
       <div class="article-content">
-        <h2>Chương trình “Áo ấm vùng cao” lan tỏa yêu thương</h2>
-        <p>CLB Thiện Nguyện đã tổ chức chuyến đi trao tặng áo ấm và quà Tết cho các em nhỏ ở vùng cao, mang lại niềm vui và hơi ấm mùa xuân.</p>
+        <h2>Hậu trường ngày hội xuân NĐC</h2>
+        <p>Đội ngũ CLB Truyền thông đã ghi lại hàng trăm khoảnh khắc đẹp, lan tỏa tinh thần học sinh NĐC trong ngày hội xuân rộn ràng.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="article">
-      <img src="https://i.imgur.com/xvPtyMI.jpeg" alt="Hiến máu nhân đạo">
+    <a href="https://www.youtube.com/" target="_blank" class="article">
+      <img src="https://i.imgur.com/7pFhJHh.jpeg" alt="Video dự án học sinh">
       <div class="article-content">
-        <h2>Ngày hội hiến máu nhân đạo – Giọt hồng yêu thương</h2>
-        <p>Đông đảo học sinh và giáo viên tham gia hiến máu, thể hiện tinh thần sẻ chia và trách nhiệm cộng đồng của tuổi trẻ trường Nguyễn Đình Chiểu.</p>
+        <h2>Ra mắt video dự án “NDC năng động”</h2>
+        <p>Sản phẩm truyền thông do CLB sản xuất, giới thiệu hoạt động nổi bật của học sinh trong học kỳ II năm học 2025–2026.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="article">
-      <img src="https://i.imgur.com/nCMfxqz.jpeg" alt="Mùa hè xanh">
+    <a href="https://www.canva.com/" target="_blank" class="article">
+      <img src="https://i.imgur.com/jPEY64J.jpeg" alt="Thiết kế poster CLB">
       <div class="article-content">
-        <h2>Mùa hè xanh – hành trình trải nghiệm và cống hiến</h2>
-        <p>Các thành viên CLB Thiện Nguyện tham gia chiến dịch “Mùa hè xanh”, dạy học miễn phí và hỗ trợ bà con tại vùng khó khăn, góp phần lan tỏa tinh thần nhân ái.</p>
+        <h2>Cuộc thi thiết kế poster chào mừng 26/3</h2>
+        <p>Cuộc thi sáng tạo poster thu hút đông đảo học sinh tham gia, thể hiện tinh thần đoàn kết và sự sáng tạo tuổi trẻ NĐC.</p>
       </div>
-    </div>
-
-    <center>
-      <a href="index.html" class="back">← Quay lại trang chủ</a>
-    </center>
+    </a>
   </div>
 
   <footer>
-    <p>📞 Liên hệ: 0275 382 2568 | 🌐 <a href="#" style="color:#81c784;">THPT Nguyễn Đình Chiểu</a></p>
+    <p>📞 Liên hệ: 0275 382 2568 | 🌐 
+      <a href="https://ndc.edu.vn" target="_blank">THPT Nguyễn Đình Chiểu</a>
+    </p>
     <p>Xem thêm: 
-      <a href="thethao.html" style="color:#81c784;">CLB Thể Thao</a> • 
-      <a href="truyenthong.html" style="color:#81c784;">CLB Truyền Thông</a>
+      <a href="thethao.html">CLB Thể Thao</a> • 
+      <a href="thiennguyen.html">CLB Thiện Nguyện</a>
     </p>
   </footer>
 </body>
