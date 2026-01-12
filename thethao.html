@@ -1,84 +1,112 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CLB Thể Thao - THPT Nguyễn Đình Chiểu</title>
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      color: #fff;
-      background: url(hinh-nen-tet-2026-dep-2-17612987122501716322739-0-13-600-973-crop-1761298790702829008798.jpg) no-repeat center center fixed; /* ảnh nền bạn gửi */
-      background-size: cover;
-      position: relative;
-    }
-
-    /* Lớp phủ để làm dịu nền */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.5);
-      z-index: -1;
+      background: #f4f6f9;
+      color: #333;
     }
 
     header {
+      background: linear-gradient(90deg, #1565c0, #42a5f5);
+      color: #fff;
       text-align: center;
-      padding: 40px 10px;
-      background: rgba(255,255,255,0.15);
-      backdrop-filter: blur(8px);
-      border-bottom: 2px solid rgba(255,255,255,0.3);
+      padding: 30px 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
     header h1 {
-      font-size: 32px;
-      margin-bottom: 5px;
-      letter-spacing: 1px;
-      color: #ffd54f;
-      text-shadow: 0 0 10px #000;
+      margin: 0;
+      font-size: 26px;
     }
 
-    .content {
+    header p {
+      margin-top: 5px;
+      font-size: 15px;
+      opacity: 0.9;
+    }
+
+    .news-section {
       max-width: 900px;
-      margin: 40px auto;
-      background: rgba(255,255,255,0.1);
-      backdrop-filter: blur(10px);
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+      margin: 30px auto;
+      padding: 0 15px;
     }
 
-    .content img {
-      width: 100%;
-      border-radius: 10px;
+    .article {
+      display: flex;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       margin-bottom: 20px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
     }
 
-    h2 {
-      color: #ffd54f;
-      border-left: 5px solid #ffd54f;
-      padding-left: 10px;
+    .article:hover {
+      transform: scale(1.02);
+    }
+
+    .article img {
+      width: 40%;
+      object-fit: cover;
+    }
+
+    .article-content {
+      padding: 20px;
+      width: 60%;
+    }
+
+    .article-content h2 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #1565c0;
+    }
+
+    .article-content p {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    footer {
+      background: #212121;
+      color: #eee;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
     }
 
     a.back {
       display: inline-block;
-      margin-top: 25px;
-      background: #ffd54f;
-      color: #000;
       text-decoration: none;
-      padding: 10px 25px;
-      border-radius: 8px;
-      font-weight: bold;
+      background: #1565c0;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
       transition: 0.3s;
+      margin-top: 10px;
     }
 
     a.back:hover {
-      background: #ffeb3b;
-      transform: scale(1.05);
+      background: #0d47a1;
+    }
+
+    @media (max-width: 768px) {
+      .article {
+        flex-direction: column;
+      }
+      .article img {
+        width: 100%;
+        height: 200px;
+      }
+      .article-content {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -88,25 +116,43 @@
     <p>Trường THPT Nguyễn Đình Chiểu</p>
   </header>
 
-  <div class="content">
-    <img src="https://i.imgur.com/0R6kW4S.jpg" alt="CLB Thể Thao">
-    <h2>Giới thiệu</h2>
-    <p>
-      CLB Thể Thao là nơi rèn luyện sức khỏe, tinh thần đồng đội và đam mê vận động thông qua các môn như:
-      <b>Bóng đá, Cầu lông, Bóng chuyền, Bóng rổ, E-Sports</b>.
-    </p>
+  <div class="news-section">
 
-    <h2>Hoạt động nổi bật</h2>
-    <ul>
-      <li>Giải bóng đá truyền thống THPT Nguyễn Đình Chiểu Cup</li>
-      <li>Giải cầu lông giao hữu học sinh – giáo viên</li>
-      <li>Team eSports thi đấu cấp tỉnh</li>
-    </ul>
+    <div class="article">
+      <img src="https://i.imgur.com/0R6kW4S.jpg" alt="Bóng đá học sinh">
+      <div class="article-content">
+        <h2>Giải bóng đá truyền thống NĐC Cup 2026 chính thức khởi tranh</h2>
+        <p>Giải bóng đá thường niên do CLB Thể thao tổ chức đã chính thức khởi tranh với sự tham gia của 16 lớp, hứa hẹn mang đến những trận cầu nảy lửa và tinh thần thể thao cao đẹp.</p>
+      </div>
+    </div>
 
-    <h2>Thông điệp</h2>
-    <p>“Thể thao giúp ta khỏe mạnh, đoàn kết và bền bỉ hơn mỗi ngày.”</p>
+    <div class="article">
+      <img src="https://i.imgur.com/Vh4Uh9a.jpeg" alt="Cầu lông">
+      <div class="article-content">
+        <h2>Giao hữu cầu lông học sinh – giáo viên</h2>
+        <p>Sự kiện thể thao đầy ý nghĩa giúp thầy và trò tăng thêm sự gắn kết, rèn luyện sức khỏe và tinh thần đồng đội. Các trận đấu diễn ra trong không khí vui tươi, thân thiện.</p>
+      </div>
+    </div>
 
-    <a href="index.html" class="back">← Quay lại trang chủ</a>
+    <div class="article">
+      <img src="https://i.imgur.com/7uJzOBI.jpeg" alt="Thể thao điện tử">
+      <div class="article-content">
+        <h2>Đội tuyển E-Sports trường tiến vào vòng chung kết khu vực</h2>
+        <p>Đại diện CLB Thể thao, đội tuyển E-Sports của trường đã xuất sắc vượt qua vòng loại để góp mặt tại vòng chung kết khu vực miền Nam — thể hiện bản lĩnh tuổi trẻ năng động.</p>
+      </div>
+    </div>
+
+    <center>
+      <a href="index.html" class="back">← Quay lại trang chủ</a>
+    </center>
   </div>
+
+  <footer>
+    <p>📞 Liên hệ: 0275 382 2568 | 🌐 <a href="#" style="color:#90caf9;">THPT Nguyễn Đình Chiểu</a></p>
+    <p>Xem thêm: 
+      <a href="truyenthong.html" style="color:#90caf9;">CLB Truyền Thông</a> • 
+      <a href="thiennguyen.html" style="color:#90caf9;">CLB Thiện Nguyện</a>
+    </p>
+  </footer>
 </body>
 </html>
