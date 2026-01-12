@@ -1,75 +1,147 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CLB Thiện Nguyện - THPT Nguyễn Đình Chiểu</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CLB Truyền Thông - THPT Nguyễn Đình Chiểu</title>
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #c8e6c9, #e8f5e9);
+      background: #f5f3fa;
       color: #333;
     }
+
     header {
-      background: linear-gradient(90deg, #2e7d32, #66bb6a);
+      background: linear-gradient(90deg, #6a1b9a, #ab47bc);
       color: #fff;
       text-align: center;
-      padding: 30px 10px;
+      padding: 30px 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
-    .content {
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    header p {
+      margin-top: 5px;
+      font-size: 15px;
+      opacity: 0.9;
+    }
+
+    .news-section {
       max-width: 900px;
-      margin: 40px auto;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+
+    .article {
+      display: flex;
       background: #fff;
-      padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    .content img {
-      width: 100%;
-      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       margin-bottom: 20px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
     }
-    h2 { color: #2e7d32; }
+
+    .article:hover { transform: scale(1.02); }
+
+    .article img {
+      width: 40%;
+      object-fit: cover;
+    }
+
+    .article-content {
+      padding: 20px;
+      width: 60%;
+    }
+
+    .article-content h2 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #6a1b9a;
+    }
+
+    .article-content p {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    footer {
+      background: #212121;
+      color: #eee;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+    }
+
     a.back {
       display: inline-block;
-      margin-top: 20px;
       text-decoration: none;
-      background: #2e7d32;
+      background: #6a1b9a;
       color: #fff;
       padding: 10px 20px;
       border-radius: 6px;
       transition: 0.3s;
+      margin-top: 10px;
     }
-    a.back:hover { background: #1b5e20; }
+
+    a.back:hover { background: #4a148c; }
+
+    @media (max-width: 768px) {
+      .article { flex-direction: column; }
+      .article img { width: 100%; height: 200px; }
+      .article-content { width: 100%; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>CLB THIỆN NGUYỆN</h1>
+    <h1>CLB TRUYỀN THÔNG</h1>
     <p>Trường THPT Nguyễn Đình Chiểu</p>
   </header>
 
-  <div class="content">
-    <img src="1_2.jpg" alt="CLB Thiện Nguyện">
-    <h2>Giới thiệu</h2>
-    <p>
-      CLB Thiện Nguyện là nơi lan tỏa yêu thương, sẻ chia và gắn kết học sinh qua các chương trình thiện nguyện:
-      <b>“Áo ấm vùng cao”, “Xuân yêu thương”, “Hiến máu nhân đạo”,...</b>
-    </p>
+  <div class="news-section">
 
-    <h2>Hoạt động nổi bật</h2>
-    <ul>
-      <li>Chương trình quyên góp và tặng quà cho học sinh khó khăn</li>
-      <li>Tham gia chiến dịch Mùa Hè Xanh</li>
-      <li>Tổ chức hoạt động từ thiện định kỳ trong trường</li>
-    </ul>
+    <div class="article">
+      <img src="https://i.imgur.com/FJ1zI3V.jpg" alt="Truyền thông sự kiện">
+      <div class="article-content">
+        <h2>Livestream lễ khai giảng ấn tượng cùng CLB Truyền Thông</h2>
+        <p>Đội ngũ CLB Truyền Thông đã thực hiện thành công buổi livestream khai giảng năm học mới, mang đến cho toàn thể học sinh và phụ huynh một trải nghiệm trực tuyến sinh động.</p>
+      </div>
+    </div>
 
-    <h2>Thông điệp</h2>
-    <p>“Cho đi là nhận lại — vì yêu thương luôn lan tỏa.”</p>
+    <div class="article">
+      <img src="https://i.imgur.com/a0eqp7g.jpeg" alt="Nhiếp ảnh học sinh">
+      <div class="article-content">
+        <h2>Cuộc thi ảnh “Khoảnh khắc tuổi học trò”</h2>
+        <p>Cuộc thi thu hút hàng trăm bức ảnh đẹp ghi lại những kỷ niệm đáng nhớ trong học đường. Tác phẩm xuất sắc được trưng bày tại sảnh chính của trường.</p>
+      </div>
+    </div>
 
-    <a href="index.html" class="back">← Quay lại trang chủ</a>
+    <div class="article">
+      <img src="https://i.imgur.com/BMDeE6D.jpeg" alt="Video sáng tạo">
+      <div class="article-content">
+        <h2>Dự án “Một ngày cùng thầy cô” đạt top 5 video ấn tượng</h2>
+        <p>Sản phẩm video sáng tạo của CLB Truyền Thông đạt giải cao trong cuộc thi sáng tạo nội dung học sinh THPT toàn tỉnh, khẳng định tài năng và nhiệt huyết của tuổi trẻ NĐC.</p>
+      </div>
+    </div>
+
+    <center>
+      <a href="index.html" class="back">← Quay lại trang chủ</a>
+    </center>
   </div>
+
+  <footer>
+    <p>📞 Liên hệ: 0275 382 2568 | 🌐 <a href="#" style="color:#ba68c8;">THPT Nguyễn Đình Chiểu</a></p>
+    <p>Xem thêm: 
+      <a href="thethao.html" style="color:#ba68c8;">CLB Thể Thao</a> • 
+      <a href="thiennguyen.html" style="color:#ba68c8;">CLB Thiện Nguyện</a>
+    </p>
+  </footer>
 </body>
 </html>
