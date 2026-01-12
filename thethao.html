@@ -8,41 +8,78 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #bbdefb, #e3f2fd);
-      color: #333;
-    }
-    header {
-      background: linear-gradient(90deg, #1565c0, #42a5f5);
       color: #fff;
-      text-align: center;
-      padding: 30px 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      background: url(hinh-nen-tet-2026-dep-2-17612987122501716322739-0-13-600-973-crop-1761298790702829008798.jpg) no-repeat center center fixed; /* ảnh nền bạn gửi */
+      background-size: cover;
+      position: relative;
     }
+
+    /* Lớp phủ để làm dịu nền */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: -1;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 10px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
+      border-bottom: 2px solid rgba(255,255,255,0.3);
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 5px;
+      letter-spacing: 1px;
+      color: #ffd54f;
+      text-shadow: 0 0 10px #000;
+    }
+
     .content {
       max-width: 900px;
       margin: 40px auto;
-      background: #fff;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
       padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
     }
+
     .content img {
       width: 100%;
       border-radius: 10px;
       margin-bottom: 20px;
     }
-    h2 { color: #1565c0; }
+
+    h2 {
+      color: #ffd54f;
+      border-left: 5px solid #ffd54f;
+      padding-left: 10px;
+    }
+
     a.back {
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 25px;
+      background: #ffd54f;
+      color: #000;
       text-decoration: none;
-      background: #1565c0;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 6px;
+      padding: 10px 25px;
+      border-radius: 8px;
+      font-weight: bold;
       transition: 0.3s;
     }
-    a.back:hover { background: #0d47a1; }
+
+    a.back:hover {
+      background: #ffeb3b;
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
@@ -52,22 +89,22 @@
   </header>
 
   <div class="content">
-    <img src="IMG_1768140916641_1768140921237.jpg" alt="CLB Thể Thao">
+    <img src="https://i.imgur.com/0R6kW4S.jpg" alt="CLB Thể Thao">
     <h2>Giới thiệu</h2>
     <p>
-      CLB Thể Thao là nơi rèn luyện sức khỏe và tinh thần đồng đội thông qua các môn:
-      <b>Bóng đá, Cầu lông, Bóng chuyền, Bóng rổ, Thể thao điện tử,...</b>
+      CLB Thể Thao là nơi rèn luyện sức khỏe, tinh thần đồng đội và đam mê vận động thông qua các môn như:
+      <b>Bóng đá, Cầu lông, Bóng chuyền, Bóng rổ, E-Sports</b>.
     </p>
 
     <h2>Hoạt động nổi bật</h2>
     <ul>
       <li>Giải bóng đá truyền thống THPT Nguyễn Đình Chiểu Cup</li>
       <li>Giải cầu lông giao hữu học sinh – giáo viên</li>
-      <li>Team E-Sports đại diện trường thi đấu</li>
+      <li>Team eSports thi đấu cấp tỉnh</li>
     </ul>
 
     <h2>Thông điệp</h2>
-    <p>“Thể thao không chỉ là sức mạnh, mà là tinh thần đoàn kết và đam mê.”</p>
+    <p>“Thể thao giúp ta khỏe mạnh, đoàn kết và bền bỉ hơn mỗi ngày.”</p>
 
     <a href="index.html" class="back">← Quay lại trang chủ</a>
   </div>
